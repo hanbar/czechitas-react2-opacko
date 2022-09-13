@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Open Sans", sans-serif;
+}
+
+header {
+  height: 50px;
+  background-color: whitesmoke;
+}
+
+nav {
+  line-height: 50px;
+  max-width: 1320px;
+  display: flex;
+  margin: 0 auto;
+}
+
+main {
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+section {
+  margin: 50px 0;
+  text-align: center;
+}
+
+.product-detail {
+  display: flex;
+  max-width: 1320px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.product-detail > div {
+  margin-left: 50px;
+}
+
+.product-name {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 20px;
+  background-color: grey;
+  color: white;
+  border: none;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: black;
+}
