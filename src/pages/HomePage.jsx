@@ -1,15 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { ProductImage } from "../components/ProductImage";
-import { ProductName } from "../components/ProductName";
+import { Product } from "../components/Product";
 
 export const HomePage = () => {
-  const [data, setData] = useState([]);
+  const [products, setProducts] = useState([]);
 
   useEffect(() => {
     fetch("https://apps.kodim.cz/react-2/xxxmuck/products")
       .then((response) => response.json())
-      .then((payload) => setData(payload));
+      .then((payload) => setProducts(payload));
   }, []);
 
   return (
@@ -22,14 +20,7 @@ export const HomePage = () => {
         </p>
       </section>
       <section className="container">
-        {data.map((item) => {
-          return (
-            <Link key={item.id} to={`/product/${item.id}`}>
-              <ProductImage image={item} />
-              <ProductName title={item.name} />
-            </Link>
-          );
-        })}
+        {products.map((product) => <Product key={product.id} product={product} />)}
       </section>
     </main>
   );

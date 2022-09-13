@@ -8,19 +8,19 @@ html {
   font-family: "Open Sans", sans-serif;
 }
 
+body {
+  margin: 0;
+}
+
 header {
-  height: 50px;
+  padding: 1rem;
   background-color: whitesmoke;
 }
 
 nav {
-  line-height: 50px;
-  max-width: 1320px;
+  max-width: 1200px;
   display: flex;
   margin: 0 auto;
-}
-
-main {
 }
 
 a {
@@ -32,7 +32,7 @@ a {
   flex-wrap: wrap;
   justify-content: center;
   gap: 50px;
-  max-width: 1320px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 

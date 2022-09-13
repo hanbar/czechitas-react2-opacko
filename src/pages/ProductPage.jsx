@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { ProductImage } from "../components/ProductImage";
-import { ProductName } from "../components/ProductName";
+import { ProductDetail } from "../components/ProductDetail";
 
 export const ProductPage = () => {
   const { productId } = useParams();
-  const [product, setProduct] = useState({});
+  const [product, setProduct] = useState('loading');
 
   useEffect(() => {
     fetch(`https://apps.kodim.cz/react-2/xxxmuck/products/${productId}`)
@@ -15,13 +14,9 @@ export const ProductPage = () => {
 
   return (
     <main>
-      <div className="product-detail">
-        <ProductImage image={product} />
-        <div>
-          <ProductName title={product.name} />
-          <button>Objednat</button>
-        </div>
-      </div>
+      {product === 'loading'
+        ? <p>loading...</p>
+        : <ProductDetail product={product} />}
     </main>
   );
 };
